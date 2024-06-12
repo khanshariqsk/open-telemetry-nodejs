@@ -14,7 +14,7 @@ const { ConsoleSpanExporter } = require("@opentelemetry/tracing");
 
 // Create Zipkin and Console exporters
 const zipkinExporter = new ZipkinExporter({
-  url: process.env.ZIPKIN_TRACES_URL,
+  url: process.env.ZIPKIN_TRACES_URL,  //http://localhost:9411/api/v2/spans (ideally)
 });
 
 const sdk = new NodeSDK({
